@@ -7,8 +7,8 @@
         <%@ include file="/shop/common.jsp" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>商城登录</title>
-        <link rel="shortcut icon" href="shop/style/favicon.ico"/>
-		<link rel="Bookmark" href="shop/style/favicon.ico"/>
+        <link rel="shortcut icon" href="shop/img/favicon.ico"/>
+		<link rel="Bookmark" href="shop/img/favicon.ico"/>
         <style type="text/css">
         body {
             background-color: #f5f5f5;
@@ -85,7 +85,7 @@
     </head>
     <body>
     <div style="width:100%;height:100px; background:#FFCC00;">
-    	<img src="shop/style/Eone.png" style="margin-left:40px;margin-top:10px;">
+    	<img src="shop/img/Eone.png" style="margin-left:40px;margin-top:10px;">
     </div>
         <div class="container">
             <form id="loginForm" class="form-signin" action="login/logineone.xhtml" method="post">

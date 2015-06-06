@@ -36,7 +36,7 @@
         </a>
         <ul class="submenu">
             <li class="">
-                <a href="javascript:void(0)" onclick="Menu.forward('shop/demo.jsp');">
+                <a href="javascript:void(0)" onclick="Menu.forward('shop/jsp/user/userQuery.jsp');">
                     <i class="icon-double-angle-right"></i>用户信息
                 </a>
             </li>

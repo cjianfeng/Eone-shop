@@ -1,0 +1,219 @@
+﻿body
+{
+    padding-top: 40px;
+}
+.section
+{
+    padding-top: 30px;
+}
+
+/* 导航(左边-简单)
+------------------------- */
+.nav-left-simple
+{
+    margin: 30px 0 0;
+    width: 228px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.065);
+    border-radius: 6px;
+    padding: 0px;
+}
+.nav-left-simple.affix
+{
+    top: 40px;
+}
+.nav-left-simple > li > a
+{
+    margin: 0px 0px -1px 0px;
+    padding: 8px 14px;
+    border: 1px solid #e5e5e5;
+}
+.nav-left-simple > li:first-child > a
+{
+    border-radius: 6px 6px 0 0;
+}
+.nav-left-simple > li:last-child > a
+{
+    border-radius: 0 0 6px 6px;
+}
+.nav-left-simple > li:first-child:last-child > a
+{
+    border-radius: 6px;
+}
+.nav-left-simple > li > a:hover
+{
+    background-color: #f5f5f5;
+}
+.nav-left-simple > li.active > a
+{
+    border: 0;
+    padding: 9px 15px;
+}
+.nav-left-simple > li > a > i.icon-chevron-right
+{
+    float: right;
+    margin-top: 2px;
+    margin-right: -6px;
+    opacity: 0.25;
+}
+.nav-left-simple > li.active > a > i
+{
+    opacity: 1;
+}
+.nav-left-simple > li > a:hover > i
+{
+    opacity: .5;
+}
+
+/* 页脚
+------------------------- */
+.footer
+{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    background-color: #000;
+    color: #fff;
+    font-family: 微软雅黑;
+    padding: 30px 0 20px;
+    margin-top: 30px;
+}
+.footer-bottom
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* responsive
+------------------------- */
+@media (min-width: 1200px)
+{
+    .nav-left-simple
+    {
+        width: 258px;
+    }
+}
+@media (max-width: 979px) and (min-width: 768px)
+{
+    body
+    {
+        padding-top: 0;
+    }
+    .nav-left-simple
+    {
+        width: 166px;
+    }
+    .nav-left-simple.affix
+    {
+        top: 0px;
+    }
+}
+@media (max-width: 768px)
+{
+    body
+    {
+        padding-top: 0;
+    }
+    .nav-left-simple
+    {
+        position: static;
+        width: auto;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .section
+    {
+        padding-top: 0;
+    }
+}
+
+/* bootstrap
+------------------------- */
+.control-group.full
+{
+    padding-right: 14px; /*组=标签+控件*/
+    margin-bottom: 5px;
+}
+.control-group.full .control-label
+{
+    width: 90px;
+}
+.control-group.full .controls
+{
+    margin-left: 100px;
+}
+.control-group.full .controls input
+{
+    width: 100%;
+}
+.dropdown-submenu > .dropdown-menu
+{
+    border-radius: 6px;
+    margin-left: 1px;
+}
+.dropdown-submenu.pull-left > .dropdown-menu
+{
+    border-radius: 6px;
+    margin-left: 7px;
+}
+.accordion-heading
+{
+    background-color: #e6e6e6;
+    border-radius: 6px 6px 0 0;
+    background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+}
+.accordion-inner
+{
+    padding: 4px;
+}
+.nav-list > .active > a
+{
+    border-radius: 4px;
+}
+.nav > li > a:hover
+{
+    border-radius: 4px;
+}
+
+
+/* 控件
+------------------------- */
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input
+{
+    padding: 0px;
+    height: 22px;
+    line-height: 22px;
+}
+.controls
+{
+    position: relative;
+}
+.controls i
+{
+    background-repeat: no-repeat;
+    background-color: #ffffff; /*background-color: red;*/
+    width: 22px;
+    height: 21px;
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.controls.date i, .controls.datetime i, .controls.time i
+{
+    background-image: url("../../bootstrap/img/glyphicons-halflings.png");
+    background-position: -187px -117px; /*background-position: -192px -120px;*/
+}
+.controls.ref i
+{
+    background-image: url("../../bootstrap/img/glyphicons-halflings.png");
+    background-position: -44px 3px; /*background-position: -48px 0;*/
+}
+.controls.txt, .controls.ref, .controls.date, .controls.datetime, .controls.time
+{
+    padding-right: 2px;
+}

@@ -1,0 +1,8 @@
+﻿.chosen-container-single .chosen-single {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-color: #FFF;
+}
+.chosen-container-single .chosen-default {
+    color: #ccc;
+}

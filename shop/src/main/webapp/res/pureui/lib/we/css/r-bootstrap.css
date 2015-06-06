@@ -1,0 +1,81 @@
+body {
+    font-family: Î¢ÈíÑÅºÚ;
+}
+.control-group.full {
+   /* padding-right: 15px; /*×é=±êÇ©+¿Ø¼þ*/
+    *padding-right: 0;
+    margin-bottom: 5px;
+    *padding-bottom:5px;
+}
+.control-group.full .control-label {
+    width: 130px;
+}
+.control-group.full .controls {
+    margin-left: 135px;
+    *padding-left: 0;
+}
+.control-group.full .controls input,.control-group.full .controls select {
+    width: 100%;
+    *position: absolute;
+}
+.control-group.full .controls select { 
+    *margin-top:1px;
+    *margin-left: 1px;
+}
+
+i[class^="icon-"], i[class*=" icon-"] {
+    margin-right: 5px;
+}
+
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    padding: 0px;
+    height: 22px;
+    line-height: 22px;
+}
+.controls {
+    position: relative;
+}
+.controls i {
+    background-repeat: no-repeat;
+    background-color: #ffffff; /*background-color: red;*/
+    width: 22px;
+    height: 21px;
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin:0 -35px 0 0;
+}
+.controls.date i, .controls.datetime i, .controls.time i {
+    background-image: url("../../bootstrap/img/glyphicons-halflings.png");
+    background-position: -187px -117px; /*background-position: -192px -120px;*/
+}
+.controls.ref i {
+    background-image: url("../../bootstrap/img/glyphicons-halflings.png");
+    background-position: -44px 3px; /*background-position: -48px 0;*/
+}
+.controls.txt, .controls.ref, .controls.date, .controls.datetime, .controls.time {
+    padding-right: 2px;
+}
+
+
+.form-horizontal .control-label {
+    padding-top: 3px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.row-fluid div[class*="span"] {
+    min-height: 0;
+}
+.form-horizontal {
+    margin-bottom: -5px;
+}
+
+.nav {
+margin-bottom: 10px;
+}

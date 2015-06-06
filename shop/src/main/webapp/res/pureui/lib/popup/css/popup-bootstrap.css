@@ -1,0 +1,129 @@
+.win {
+    width: 600px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    background-color: #fff; /*box-shadow: 2px 2px 2px #ccc;*/
+    -webkit-box-shadow: 0 0 10px #aaa;
+    -moz-box-shadow: 0 0 10px #aaa;
+    box-shadow: 0 0 10px #aaa;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    z-index: 101; 
+    height: auto;/*自适应*/
+    /*height: 200px;自定义高度,总高度*/
+    /*20140324.1 By Ocean 解决弹出窗口，点击“X”按钮关闭时，页面头部会有一小部分遗留*/
+    overflow: hidden;
+}
+.win-header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: #f5f5f5;
+    height: 30px;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.win-header .close {
+    font-weight: bold;
+    opacity: 0.3;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: Arial;
+}
+.win-content {
+    margin: 31px 1px 0 0;
+    width: 100%;
+    /*height: 166px;自定义高度,总高度-31-3*/
+    /*overflow: auto;自定义高度*/
+    *padding-top:31px;
+}
+
+/* win */
+.win-header span {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+/* win-tab */
+.win-header ul {
+    margin: 0px;
+    padding: 0px;
+}
+.win-header ul li {
+    list-style: none;
+    float: left;
+    display: block;
+    background-color: #eee; /*width: 100px;*/
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 0px 10px;
+    margin-left: -1px;
+    margin-top: -1px;
+    cursor: pointer;
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+.win-header ul li.active {
+    background-color: #fff;
+    border-bottom-color: transparent;
+    font-weight: bold;
+    color: red;
+}
+.win-header ul li:hover {
+    background-color: #ddd;
+}
+.win-header ul li.active:hover {
+    background-color: #fff;
+}
+.win-tab .win-content > div {
+    display: none;
+}
+.win-tab .win-content > div.active {
+    display: block;
+}
+
+/*查询*/
+.win-content .form-search {
+    padding: 12px 12px 15px 12px;
+}
+.win-content .form-search-btn {
+    text-align: center;
+    margin-top: 15px;
+    padding-left: 50px;
+}
+.win-content .form-search-btn a {
+    margin-right: 50px;
+}
+
+/*透明层*/
+.hyaline {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30); /*ie8*/
+}
+
+/*弹出层滚动条,不知道为什么增加高度*/
+.win-content > div {
+    /*overflow: hidden;*/
+}
+

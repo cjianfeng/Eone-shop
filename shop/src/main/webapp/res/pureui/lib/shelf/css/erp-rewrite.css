@@ -1,0 +1,214 @@
+/*缩进*/
+.nav-list > li > .submenu > li .submenu {
+    margin-left: 18px;
+}
+/*横线*/
+.nav-list > li .submenu > li > a {
+    border-top: none;
+    border-bottom: 1px dotted #e4e4e4;
+}
+/*竖线*/
+.nav-list > li .submenu:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #ccd7e2;
+}
+/*橫线中间杠*/
+.nav-list > li > .submenu > li .submenu li:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 8px;
+    left: 18px;
+    top: 17px;
+    border-top: 1px solid #ccd7e2;
+}
+/*第3级*/
+.nav-list > li > .submenu li > .submenu > li > .submenu > li > a {
+    padding-left: 18px;
+}
+/*缩进*/
+.menu-min .nav-list > li > .submenu > li .submenu {
+    margin-left: 12px;
+}
+/*竖线*/
+.menu-min .nav-list > li .submenu:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #ccd7e2;
+}
+/*橫线中间杠*/
+.menu-min .nav-list > li > .submenu > li .submenu li:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 8px;
+    left: 12px;
+    top: 17px;
+    border-top: 1px solid #ccd7e2;
+}
+/*第3级*/
+.menu-min .nav-list > li > .submenu li > .submenu > li > .submenu > li > a {
+    padding-left: 24px;
+}
+/*主题颜色*/
+.btn-colorpicker {
+    width: 16px;
+    height: 16px;
+}
+/*商标*/
+.navbar .brand small{
+    letter-spacing: 2px;
+}
+/*快捷键*/
+.sidebar-shortcuts-large .btn {
+    margin-right: 4px;
+}
+.sidebar-shortcuts-large a:last-child {
+    margin-right: 0;
+}
+/*用户信息*/
+.erp-nav > li {
+    background: none;
+}
+/*左侧导航-选中*/
+.nav-list > li.open > a, .nav-list > li > .submenu li.open > a, .nav-list > li > .submenu li > .submenu li.open > a {
+    color: #616161;
+}
+.nav-list > li.open > a > .arrow, .nav-list > li > .submenu li.open > a .arrow, .nav-list > li > .submenu li > .submenu li.open > a .arrow {
+    color: #666;
+}
+.nav-list > li.active > a, .nav-list > li > .submenu li.active > a, .nav-list > li > .submenu li > .submenu li.active > a {
+    color: #555555;
+    font-weight: normal;
+}
+.nav-list > li.active > a:hover, .nav-list > li.active > .submenu li.active > a:hover, .nav-list > li.active > .submenu li.active > .submenu li.active > a:hover {
+    color: #CD0505;
+    font-weight: normal;
+}
+.nav-list > li > a:hover, .nav-list > li > .submenu li > a:hover, .nav-list > li > .submenu li > .submenu li > a:hover {
+    color: #CD0505;
+    font-weight: normal;
+    text-decoration: none;
+}
+.nav-list > li .submenu > li.open > a > i[class*="icon-"]:first-child {
+    color: #666;
+}
+.nav-list > li .submenu > li.active > a > i[class*="icon-"]:first-child {
+    color: #136bb4;
+}
+.nav-list > li > .submenu li > .submenu li.open > a > i[class*="icon-"]:first-child {
+    color: #666;
+}
+.nav-list > li > .submenu li > .submenu li.active > a > i[class*="icon-"]:first-child {
+    color: #CD0505;
+}
+/*左侧导航-经过箭头*/
+.nav-list > li > .submenu li > .submenu > li a > i[class*="icon-"]:first-child {
+    display: none;
+    color: inherit;
+    font-size: 12px;
+    position: absolute;
+    background-color: #fff;
+    left: -10px;
+}
+.nav-list > li > .submenu li > .submenu > li a:hover > i[class*="icon-"]:first-child {
+    display: inline-block;
+    color: inherit;
+    font-size: 12px;
+    position: absolute;
+    background-color: #fff;
+    left: -10px;
+}
+.nav-list > li > .submenu li > .submenu > li > a {
+    padding-left: 18px;
+}
+/*内容部分*/
+.page-content {
+    padding: 8px;
+}
+/*框*/
+.widget-box {
+    margin: 0 0 10px 0;
+}
+.widget-header {
+    min-height: 30px;
+}
+.widget-header > .widget-caption, .widget-header > :first-child {
+    line-height: 29px;
+}
+.widget-toolbar {
+    line-height: 29px;
+    padding: 0;
+}
+.widget-toolbar > a {
+    width: 30px;
+    text-align: center;
+    line-height: 29px;
+    margin: 0;
+}
+.widget-toolbar > a[data-action] > i[class*="icon-"] {
+    color: #fff;
+}
+.widget-form {
+    padding: 12px;
+}
+.form-toolbar {
+    margin: -12px -12px 10px;
+    padding: 3px 0 4px 4px;
+    border-bottom: 1px dotted #ccc;
+    background-color: #eff3f8;
+}
+
+/*菜单展开折叠*/
+.sidebar-collapse > i[class*="icon-"] {
+    color: #fff;
+    border: none;
+    background-color: #5DBEEB;
+}
+
+/*块级*/
+.widget-body {
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    background-color: #F8F8F8;
+    *padding-bottom: 1px;
+}
+.widget-title {
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+.widget-header {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    color: #fff;
+    background-color: #FFCC00;
+    border: 0;
+}
+.widget-toolbar > i[data-action="collapse"], .header-color-dark > .widget-toolbar > i[data-action="collapse"] {
+    color: #fff;
+}
+.widget-main {
+    padding: 10px;
+}
+.widget-box .widget-box {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/* 弹出框的父不能是relative */
+.main-container {
+    position: static;
+}
+.sidebar {
+    top: 45px;
+}

@@ -1,0 +1,13 @@
+﻿.icheckbox_minimal, .iradio_minimal {
+    display: inline-block;
+    *display:inline;
+    _zoom:1;
+    top: 4px;
+    margin-right: 5px;
+}
+.radio, .checkbox {
+    padding-left: 0;
+}
+.controls>.radio:first-child, .controls>.checkbox:first-child {
+    padding-top: 0;
+}

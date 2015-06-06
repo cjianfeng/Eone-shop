@@ -15,8 +15,8 @@ import com.eone.shop.services.UserService;
 @RequestMapping("/user")
 public class UserController {
 
-	@Resource  
-    private UserService userService;  
+	@Resource
+    private UserService userService;
       
 	@RequestMapping("/showUser")
 	public String toIndex(HttpServletRequest request, Model model) {

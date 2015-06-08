@@ -4,16 +4,16 @@ var userQuery = function(){
 		init : function() {
 			PUI.plugin.init({}, $("#conditionForm"));
 			//初始化表格
-			var _cols = [{ title :'代码',name:'code', width : 90, align : 'center',sortable : true, type : 'string'},
-			            { title :'名称',name:'name', width : 90, align : 'center',sortable : true, type : 'string'},
-						{ title :'排序',name:'sequenceNo', width : 90, align : 'center',sortable : true, type : 'string'},
+			var _cols = [{ title :'姓名',name:'userName', width : 90, align : 'center',sortable : true, type : 'string'},
+			            { title :'性别',name:'gender', width : 90, align : 'center',sortable : true, type : 'string'},
+						{ title :'角色',name:'roleId', width : 90, align : 'center',sortable : true, type : 'string'},
 						{ title :'描述',name:'description', width : 90, align : 'center',sortable : true, type : 'string'},
 						{ title :'id',name:'id', width : 50, align : 'center',sortable : true, type : 'int',hidden:true}];
 				_mmg = $("#mmg").mmGrid({
 				height : getAutoHeightByMmGrid($(".page-content")),
 				width : 'auto',
 				cols : _cols,
-				url : 'shop/user/page.shtml',
+				url : 'user/page.xhtml',
 			 	params : $("#conditionForm").serialize(),
 				method : 'post',
 				nowrap : true,
@@ -34,7 +34,7 @@ var userQuery = function(){
 		},
 		add : function() {
 			userEdit.index = null;
-			$("#user_content").html(PUI.String.format($("#module-type-template").html(), {}));
+			$("#user_content").html(PUI.String.format($("#user-edit-template").html(), {}));
 			userEdit.init();
 			$("#userPop").popup();
 
@@ -46,7 +46,7 @@ var userQuery = function(){
 			}
 			userEdit.index = _mmg.selectedRowsIndex()[0];
 			var item = _mmg.selectedRows()[0];
-			$("#user_content").html(PUI.String.format($("#module-type-template").html(), item));
+			$("#user_content").html(PUI.String.format($("#user-edit-template").html(), item));
 			userEdit.init();
 			$("#userPop").popup();
 		},
@@ -67,7 +67,7 @@ var userQuery = function(){
 					param = param + "&";
 				}
 			}
-			$.post("shop/user/delete.shtml",param,function(data){
+			$.post("user/delete.xhtml",param,function(data){
 				userQuery.query();
 				PUI.MessageBox.alert("删除成功");
 			});

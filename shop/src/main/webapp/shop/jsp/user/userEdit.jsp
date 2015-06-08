@@ -9,23 +9,31 @@
 			<input id="userId" type="hidden" name="userModel.id" value="{{id}}">
 			<div class="row-fluid ">
 				<div class="span12 control-group full">
-					<label class="control-label">名称</label>
+					<label class="control-label">姓名</label>
 					<div class="controls txt">
-						<input type="text" name="userModel.name" value="{{name}}" max="100" data-required="此项必填" />
+						<input type="text" name="userModel.userName" value="{{userName}}" max="100" data-required="此项必填" />
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid ">
+				<div class="span12 control-group full">
+					<label class="control-label">密码</label>
+					<div class="controls txt">
+						<input type="password" name="userModel.password" value="{{password}}" max="100" data-required="此项必填" />
 					</div>
 				</div>
 			</div>
 			<div class="row-fluid ">
 				<div class="span6 control-group full">
-					<label class="control-label">代码</label>
+					<label class="control-label">角色</label>
 					<div class="controls txt">
-						<input type="text" name="userModel.code" value="{{code}}" max="100" data-required="此项必填" />
+						<input type="text" name="userModel.roleId" value="{{roleId}}" max="10" data-required="此项必填" />
 					</div>
 				</div>
 				<div class="span6 control-group full">
-					<label class="control-label">排序</label>
+					<label class="control-label">性别</label>
 					<div class="controls txt">
-						<input type="text" name="userModel.sequenceNo" value="{{sequenceNo}}" max="10" >
+						<input type="text" name="userModel.gender" value="{{gender}}" max="10" data-required="此项必填" />
 					</div>
 				</div>
 			</div>

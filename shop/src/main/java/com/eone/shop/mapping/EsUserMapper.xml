@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eone.shop.mapper.EsUserMapper">
+	<resultMap id="BaseResultMap" type="com.eone.shop.model.EsUserModel">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="userName" property="userName" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="gender" property="gender" jdbcType="VARCHAR" />
+		<result column="roleId" property="roleId" jdbcType="INTEGER" />
+		<result column="description" property="description" jdbcType="VARCHAR" />
+		<result column="creator" property="creator" jdbcType="VARCHAR" />
+		<result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="modifier" property="modifier" jdbcType="VARCHAR" />
+		<result column="modifyTime" property="modifyTime" jdbcType="TIMESTAMP" />
+		<result column="recVer" property="recVer" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, userName, password, gender, roleId, description, 
+		creator, createTime, modifier, modifyTime, recVer
+	</sql>
+	<!-- 按主键查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from EsUser
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	<!-- 按主键删除 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		delete from EsUser
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<!-- 插入 -->
+	<insert id="insert" parameterType="com.eone.shop.model.EsUserModel">
+		insert into EsUser (userName, password, gender, roleId, description,
+		creator, createTime, modifier, modifyTime, recVer)
+		values (#{userName,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{gender,jdbcType=VARCHAR},
+		#{roleId,jdbcType=INTEGER},
+		#{description,jdbcType=VARCHAR}, #{creator,jdbcType=VARCHAR}, now(),
+		#{modifier,jdbcType=VARCHAR}, now(), #{recVer,jdbcType=INTEGER})
+	</insert>
+	<!-- 更新 -->
+	<update id="updateByPrimaryKey" parameterType="com.eone.shop.model.EsUserModel">
+		update EsUser
+		set
+		userName = #{userName,jdbcType=VARCHAR},
+		password = #{password,jdbcType=VARCHAR},
+		gender = #{gender,jdbcType=VARCHAR},
+		roleId = #{roleId,jdbcType=INTEGER},
+		description = #{description,jdbcType=VARCHAR},
+		modifier = #{modifier,jdbcType=VARCHAR},
+		modifyTime = now(),
+		recVer = recVer + 1
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<!-- 获取页面条数 -->
+	<select id="getPageCount" resultType="int"
+		parameterType="com.eone.shop.model.EsUserModel">
+		select count(1) from EsUser where userName like
+		CONCAT('%',#{userName},'%')
+	</select>
+	<!-- 获取页面数据 -->
+	<select id="getPage" parameterType="com.eone.shop.model.EsUserModel" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from EsUser
+		where userName like CONCAT('%',#{userName},'%')
+	</select>
+	<!-- 样例：选择性插入 -->
+	<!-- 
+	<insert id="insertSelective" parameterType="com.eone.shop.model.EsUserModel">
+		insert into EsUser
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null"> id, </if>
+			<if test="userName != null"> user_name, </if>
+			<if test="password != null"> password, </if>
+		</trim>
+		<trim prefix="values 
+		(" suffix=")" suffixOverrides=",">
+			<if test="id != null"> #{id,jdbcType=INTEGER},
+			</if>
+			<if test="userName != null"> #{userName,jdbcType=VARCHAR}, </if>
+			<if test="password != null"> #{password,jdbcType=VARCHAR}, </if>
+		</trim>
+	</insert>
+	 -->
+	<!-- 样例：选择性更新 -->
+	<!-- 
+	<update id="updateByPrimaryKeySelective" parameterType="com.eone.shop.model.EsUserModel">
+		update EsUser
+		<set>
+			<if test="userName != null">
+				userName = #{userName,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				password = #{password,jdbcType=VARCHAR},
+			</if>
+			modifier = #{modifier,jdbcType=VARCHAR},
+			modifyTime = now(),
+			recVer =
+			recVer + 1
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	 -->
+</mapper>

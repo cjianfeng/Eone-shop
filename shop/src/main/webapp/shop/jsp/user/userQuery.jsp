@@ -26,9 +26,9 @@
 			<form class="form-horizontal" id="conditionForm">
 				<div class="row-fluid ">
 					<div class="span4 control-group full">
-						<label class="control-label" for="">名称</label>
+						<label class="control-label" for="">姓名</label>
 						<div class="controls txt">
-							<input id="name" type="text" name="condition.name" >
+							<input id="name" type="text" name="condition.userName" >
 						</div>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 	</div>
 </div>
 
-<div id="module-type-template" style="display: none;">
+<div id="user-edit-template" style="display: none;">
     <%@ include file="userEdit.jsp" %>
 </div>
 

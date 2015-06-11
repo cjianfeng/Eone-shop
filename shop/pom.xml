@@ -138,7 +138,12 @@
         <version>${slf4j.version}</version>
     </dependency>
     <!-- log end -->
-    <!-- 映入JSON -->
+    <!-- 引入JSON -->
+    <dependency>
+	    <groupId>org.codehaus.jackson</groupId>
+	    <artifactId>jackson-core-asl</artifactId>
+	    <version>1.9.13</version>
+	</dependency>
     <dependency>
         <groupId>org.codehaus.jackson</groupId>
         <artifactId>jackson-mapper-asl</artifactId>
@@ -160,6 +165,12 @@
         <artifactId>commons-codec</artifactId>
         <version>1.9</version>
     </dependency>
+    <!-- 语言包 -->
+    <dependency>
+	    <groupId>commons-lang</groupId>
+	    <artifactId>commons-lang</artifactId>
+	    <version>2.5</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>shop</finalName>

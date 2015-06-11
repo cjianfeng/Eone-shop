@@ -22,7 +22,7 @@ var userEdit = function() {
 			var editorForm = $("#userEdit_content form");
 			if(editorForm.isValid()) {
 				var param = $("#userEditForm").serialize();
-				$.post("user/save.xhtml",param,function(data){
+				$.post("user/save.shtml",param,function(data){
 					PUI.MessageBox.info("保存成功");
 					$("#userPop").popup({display:false});
 					userQuery.query();

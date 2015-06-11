@@ -88,7 +88,7 @@
     	<img src="shop/img/Eone.png" style="margin-left:40px;margin-top:10px;">
     </div>
         <div class="container">
-            <form id="loginForm" class="form-signin" action="login/logineone.xhtml" method="post">
+            <form id="loginForm" class="form-signin" action="login/logineone.shtml" method="post">
                 <span style="font-faimly:'微软雅黑';font-size:14px;color:#B9C1CF">登录</span>
 				<hr style="margin-top:0px;width:298px;color:#B9C1CF;border:1px solid"/>
                     <label>

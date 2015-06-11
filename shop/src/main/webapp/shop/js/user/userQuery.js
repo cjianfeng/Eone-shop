@@ -13,7 +13,7 @@ var userQuery = function(){
 				height : getAutoHeightByMmGrid($(".page-content")),
 				width : 'auto',
 				cols : _cols,
-				url : 'user/page.xhtml',
+				url : 'user/page.shtml',
 			 	params : $("#conditionForm").serialize(),
 				method : 'post',
 				nowrap : true,
@@ -67,7 +67,7 @@ var userQuery = function(){
 					param = param + "&";
 				}
 			}
-			$.post("user/delete.xhtml",param,function(data){
+			$.post("user/delete.shtml",param,function(data){
 				userQuery.query();
 				PUI.MessageBox.alert("删除成功");
 			});

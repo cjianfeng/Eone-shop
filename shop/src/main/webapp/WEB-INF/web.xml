@@ -9,6 +9,19 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring-mybatis.xml</param-value>
     </context-param>
+    <!-- 用户Session过滤器 -->
+    <filter>
+		<filter-name>sessionFilter</filter-name>
+		<filter-class>com.eone.shop.filter.SessionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sessionFilter</filter-name>
+		<url-pattern>*.shtml</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>sessionFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
     <!-- 编码过滤器 -->
     <filter>
         <filter-name>encodingFilter</filter-name>

@@ -2,7 +2,9 @@ package com.eone.xframework.core.controller;
 
 import java.util.Date;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
 
 import com.eone.xframework.core.AbstractSupport;
 import com.eone.xframework.core.exception.FrameworkException;
@@ -10,7 +12,7 @@ import com.eone.xframework.core.model.Recordable;
 import com.eone.xframework.core.security.UnLoginException;
 import com.eone.xframework.core.security.UserContext;
 import com.eone.xframework.core.security.UserContextFactory;
-
+@Component
 public class ActionSupport extends AbstractSupport{
 	public static final String SUCCESS = "success";
 	public static final String FAILURE = "failure";
@@ -19,8 +21,8 @@ public class ActionSupport extends AbstractSupport{
 	public static final String INPUT = "input";
 	public static final String LOGIN = "login";
 
-	@Autowired
-	protected UserContextFactory userContextFactory;
+	@Resource
+	private UserContextFactory userContextFactory;
 
 	@Deprecated
 	protected void setSessionAttribute(String key, Object value) {

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.eone.shop.model.EsUserModel;
 import com.eone.shop.services.EsUserService;
 import com.eone.xframework.core.Pagination;
+import com.eone.xframework.core.controller.JSONActionSupport;
 import com.eone.xframework.core.enhanced.spring.ParamPrefix;
 import com.eone.xframework.pureui.utils.MessageUtils;
 import com.eone.xframework.pureui.view.JSONMessage;
@@ -18,7 +19,7 @@ import com.eone.xframework.pureui.view.JSONMessage;
 
 @Controller
 @RequestMapping("/user")
-public class EsUserController {
+public class EsUserController extends JSONActionSupport{
 	
 	@Resource
     private EsUserService esUserService;

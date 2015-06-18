@@ -6,7 +6,7 @@ public class SimpleUserContextFactory implements UserContextFactory {
 	public static final String LOGGEDIN_USER_SESSION_KEY = "loggedin.user.session.id";
 
 	public UserContext getLoggedInUser() throws UnLoginException {
-		UserContext user = (UserContext) (UserContext) getSessionAttribute("loggedin.user.session.id");
+		UserContext user = (UserContext) (UserContext) getSessionAttribute(LOGGEDIN_USER_SESSION_KEY);
 		if (user == null) {
 			throw new UnLoginException();
 		}
@@ -14,11 +14,11 @@ public class SimpleUserContextFactory implements UserContextFactory {
 	}
 
 	public boolean isLoggedIn() {
-		return getSessionAttribute("loggedin.user.session.id") != null;
+		return getSessionAttribute(LOGGEDIN_USER_SESSION_KEY) != null;
 	}
 
 	public void login(UserContext user) {
-		setSessionAttribute("loggedin.user.session.id", user);
+		setSessionAttribute(LOGGEDIN_USER_SESSION_KEY, user);
 	}
 
 	protected void setSessionAttribute(String key, Object value) {
@@ -30,6 +30,6 @@ public class SimpleUserContextFactory implements UserContextFactory {
 	}
 
 	public void logout() {
-		setSessionAttribute("loggedin.user.session.id", null);
+		setSessionAttribute(LOGGEDIN_USER_SESSION_KEY, null);
 	}
 }

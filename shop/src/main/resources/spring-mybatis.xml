@@ -11,6 +11,12 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
     <!-- 自动扫描 -->
     <context:component-scan base-package="com.eone.shop" />
+    
+    <!-- 不用扫描包注解的方式，采用下面XML的配置方式 -->
+    <!-- <context:component-scan base-package="com.eone.xframework.core.security" /> -->
+    <!-- 用户上下文件的管理器 -->
+	<bean id="userContextFactory" class="com.eone.xframework.core.security.SimpleUserContextFactory"></bean>
+	
     <!-- 引入配置文件 -->
     <bean id="propertyConfigurer"
         class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">

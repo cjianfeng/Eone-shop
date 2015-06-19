@@ -4,16 +4,14 @@ import java.util.Date;
 
 import javax.annotation.Resource;
 
-import org.springframework.stereotype.Component;
-
 import com.eone.xframework.core.AbstractSupport;
 import com.eone.xframework.core.exception.FrameworkException;
 import com.eone.xframework.core.model.Recordable;
 import com.eone.xframework.core.security.UnLoginException;
 import com.eone.xframework.core.security.UserContext;
 import com.eone.xframework.core.security.UserContextFactory;
-@Component
-public class ActionSupport extends AbstractSupport{
+
+public class ActionSupport extends AbstractSupport {
 	public static final String SUCCESS = "success";
 	public static final String FAILURE = "failure";
 	public static final String NONE = "none";

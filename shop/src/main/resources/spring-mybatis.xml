@@ -25,6 +25,7 @@
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
         destroy-method="close">
+        <!-- <property name="dialect" value="mysql"/>数据库类型：mysql、oracle、mssql，默认数据库类型为mysql -->
         <property name="driverClassName" value="${driver}" />
         <property name="url" value="${url}" />
         <property name="username" value="${username}" />
@@ -42,7 +43,8 @@
     </bean>
 
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <!-- 修改org.mybatis.spring.SqlSessionFactoryBean成com.eone.xframework.core.ibatis.SqlSessionFactoryBean -->
+    <bean id="sqlSessionFactory" class="com.eone.xframework.core.ibatis.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <!-- 自动扫描mapping.xml文件 -->
         <property name="mapperLocations" value="classpath:com/eone/shop/mapping/*.xml"></property>

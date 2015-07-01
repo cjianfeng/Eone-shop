@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class RowBounds extends org.apache.ibatis.session.RowBounds implements
 		Serializable {
-	private int offset = 0;
+	private int offset = NO_ROW_OFFSET;
 
-	private int limit = 2147483647;
+	private int limit = NO_ROW_LIMIT;
 
 	private int pageNumber = 0;
 
@@ -14,6 +14,8 @@ public class RowBounds extends org.apache.ibatis.session.RowBounds implements
 	}
 
 	public RowBounds(int pageNumber, int pageSize) {
+		// TODO:分页断点bug入口2：用不用super，父类的RowBounds的offset和limit参数都不会改变
+		//super((pageNumber - 1) * pageSize, pageSize);
 		this.limit = pageSize;
 		this.pageNumber = pageNumber;
 		this.offset = ((pageNumber - 1) * pageSize);

@@ -33,9 +33,10 @@ public class EsUserController extends JSONActionSupport{
 	@RequestMapping("/page")
 	public @ResponseBody
 	JSONMessage page(@ParamPrefix(value = "condition") EsUserModel condition) {
+		// TODO:分页断点bug入口1：condition.buildBounds()
 		Pagination page = esUserService.getPage(condition,
 				condition.buildBounds());
-		JSONMessage jsonMessage = MessageUtils.createPageMsg(page);
+		jsonMessage = MessageUtils.createPageMsg(page);
 		return jsonMessage;
 	}
 	
@@ -48,7 +49,7 @@ public class EsUserController extends JSONActionSupport{
 	@RequestMapping(value = "/delete")
 	public @ResponseBody
 	JSONMessage delete(@ParamPrefix(value = "user") List<EsUserModel> models) {
-		JSONMessage jsonMessage = new JSONMessage();
+		jsonMessage = new JSONMessage();
 		this.esUserService.delete(models);
 		return jsonMessage;
 	}
@@ -62,7 +63,7 @@ public class EsUserController extends JSONActionSupport{
 	@RequestMapping(value = "/save")
 	public @ResponseBody 
 	JSONMessage save(@ParamPrefix(value = "userModel") EsUserModel model) {
-		JSONMessage jsonMessage = new JSONMessage();
+		jsonMessage = new JSONMessage();
 		this.esUserService.save(model);
 		return jsonMessage;
 	}

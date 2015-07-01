@@ -13,11 +13,6 @@
     <context:component-scan base-package="com.eone.shop.controller" />
     <context:component-scan base-package="com.eone.xframework.core.controller" />
     
-    <!-- enable autowire -->
-    <!-- <context:annotation-config /> -->
-    <!-- <context:component-scan base-package="com.eone.xframework"
-							name-generator="com.eone.xframework.core.context.BaseBeanNameGenerator" /> -->
-    
     <!-- 自定义Annotation -->
     <mvc:annotation-driven>
     	<mvc:argument-resolvers>

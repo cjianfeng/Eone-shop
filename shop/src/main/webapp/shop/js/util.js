@@ -100,9 +100,9 @@ $(document).ready(function() {
 	$(document).ajaxComplete(validateSecurityAccess).ajaxError(validateSecurityAccess);
 	
 	$(".page-content").css("padding-bottom", "0px");
-	$(".page-content").css({ height: $(window).height() - 45 - 41 - 8});
+	$(".page-content").css({ height: $(window).height() - 45 - 41 - 10});
 	$(".page-content").resize(function () {
-		$(".page-content").css({ height: $(window).height() - 45 - 41 - 8});
+		$(".page-content").css({ height: $(window).height() - 45 - 41 - 10});
 	});
 });
 
